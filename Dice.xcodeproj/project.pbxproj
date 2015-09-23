@@ -100,12 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				693E6FDF1BB3038900E2EFCB /* AppDelegate.swift */,
+				693E700C1BB304F100E2EFCB /* DieView.swift */,
 				693E6FE11BB3038900E2EFCB /* Assets.xcassets */,
-				693E6FE31BB3038900E2EFCB /* MainMenu.xib */,
 				693E6FE61BB3038900E2EFCB /* Info.plist */,
+				693E6FE31BB3038900E2EFCB /* MainMenu.xib */,
 				693E70081BB304A800E2EFCB /* MainWindowController.swift */,
 				693E70091BB304A800E2EFCB /* MainWindowController.xib */,
-				693E700C1BB304F100E2EFCB /* DieView.swift */,
 			);
 			path = Dice;
 			sourceTree = "<group>";

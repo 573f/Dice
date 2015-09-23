@@ -15,22 +15,29 @@
         <window title="DieView" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="contentRect" x="196" y="240" width="593" height="393"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <rect key="frame" x="0.0" y="0.0" width="593" height="393"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92e-ef-dZV" customClass="DieView" customModule="Dice" customModuleProvider="target">
-                        <rect key="frame" x="20" y="20" width="440" height="230"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="92e-ef-dZV" customClass="DieView" customModule="Dice" customModuleProvider="target">
+                        <rect key="frame" x="20" y="20" width="553" height="353"/>
                         <animations/>
                     </customView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="92e-ef-dZV" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="8EZ-xf-YC3"/>
+                    <constraint firstAttribute="bottom" secondItem="92e-ef-dZV" secondAttribute="bottom" constant="20" id="FsJ-gT-3S3"/>
+                    <constraint firstItem="92e-ef-dZV" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="ljY-US-7Xg"/>
+                    <constraint firstAttribute="trailing" secondItem="92e-ef-dZV" secondAttribute="trailing" constant="20" id="soL-Mt-VUy"/>
+                </constraints>
                 <animations/>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
+            <point key="canvasLocation" x="425.5" y="731.5"/>
         </window>
     </objects>
 </document>
