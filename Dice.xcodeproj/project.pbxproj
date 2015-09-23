@@ -12,6 +12,9 @@
 		693E6FE51BB3038900E2EFCB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693E6FE31BB3038900E2EFCB /* MainMenu.xib */; };
 		693E6FF01BB3038900E2EFCB /* DiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E6FEF1BB3038900E2EFCB /* DiceTests.swift */; };
 		693E6FFB1BB3038900E2EFCB /* DiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E6FFA1BB3038900E2EFCB /* DiceUITests.swift */; };
+		693E700A1BB304A800E2EFCB /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E70081BB304A800E2EFCB /* MainWindowController.swift */; settings = {ASSET_TAGS = (); }; };
+		693E700B1BB304A800E2EFCB /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693E70091BB304A800E2EFCB /* MainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
+		693E700D1BB304F100E2EFCB /* DieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E700C1BB304F100E2EFCB /* DieView.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		693E6FF61BB3038900E2EFCB /* DiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		693E6FFA1BB3038900E2EFCB /* DiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceUITests.swift; sourceTree = "<group>"; };
 		693E6FFC1BB3038900E2EFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		693E70081BB304A800E2EFCB /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		693E70091BB304A800E2EFCB /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		693E700C1BB304F100E2EFCB /* DieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,9 @@
 				693E6FE11BB3038900E2EFCB /* Assets.xcassets */,
 				693E6FE31BB3038900E2EFCB /* MainMenu.xib */,
 				693E6FE61BB3038900E2EFCB /* Info.plist */,
+				693E70081BB304A800E2EFCB /* MainWindowController.swift */,
+				693E70091BB304A800E2EFCB /* MainWindowController.xib */,
+				693E700C1BB304F100E2EFCB /* DieView.swift */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				693E6FE21BB3038900E2EFCB /* Assets.xcassets in Resources */,
+				693E700B1BB304A800E2EFCB /* MainWindowController.xib in Resources */,
 				693E6FE51BB3038900E2EFCB /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693E700A1BB304A800E2EFCB /* MainWindowController.swift in Sources */,
 				693E6FE01BB3038900E2EFCB /* AppDelegate.swift in Sources */,
+				693E700D1BB304F100E2EFCB /* DieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
