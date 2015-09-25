@@ -97,6 +97,17 @@ class DieView: NSView {
                     drawDot(0, 0.5) // Mid left/right
                     drawDot(1, 0.5)
                 }
+            } else {
+                var paraStyle = NSParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
+                paraStyle.alignment = .Center
+                let font = NSFont.systemFontOfSize(edgeLength * 0.65)
+                let attrs = [
+                    NSForegroundColorAttributeName: NSColor.blackColor(),
+                    NSFontAttributeName: font,
+                    NSParagraphStyleAttributeName: paraStyle
+                ]
+                let string = "\(intValue)" as NSString
+                string.drawCenteredInRect(dieFrame, attributes: attrs)
             }
         }
     }
@@ -108,7 +119,6 @@ class DieView: NSView {
     // MARK: - Mouse Events
     
     override func mouseDown(theEvent: NSEvent) {
-        Swift.print("mouseDown")
         let dieFrame = metricsForSize(bounds.size).dieFrame
         let pointInView = convertPoint(theEvent.locationInWindow, fromView: nil)
         pressed = dieFrame.contains(pointInView)
@@ -119,7 +129,6 @@ class DieView: NSView {
     }
     
     override func mouseUp(theEvent: NSEvent) {
-        Swift.print("mouseUp clickCount: \(theEvent.clickCount)")
         if theEvent.clickCount == 2 {
             randomize()
         }
@@ -155,9 +164,7 @@ class DieView: NSView {
     override func insertText(insertString: AnyObject) {
         let text = insertString as! String
         if let number = Int(text) {
-            if (1...6).indexOf(number) != nil {
-                intValue = number
-            }
+            intValue = number
         }
     }
     
