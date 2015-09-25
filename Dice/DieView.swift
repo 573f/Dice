@@ -125,4 +125,31 @@ class DieView: NSView {
         }
         pressed = false
     }
+    
+    // MARK: - First Responder
+    
+    override var acceptsFirstResponder: Bool { return true }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        return true
+    }
+    
+    // MARK: - Keyboard Events
+    
+    override func keyDown(theEvent: NSEvent) {
+        interpretKeyEvents([theEvent])
+    }
+    
+    override func insertText(insertString: AnyObject) {
+        let text = insertString as! String
+        if let number = Int(text) {
+            if (1...6).indexOf(number) != nil {
+                intValue = number
+            }
+        }
+    }
 }
