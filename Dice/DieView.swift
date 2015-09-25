@@ -138,6 +138,14 @@ class DieView: NSView {
         return true
     }
     
+    override func drawFocusRingMask() {
+        NSBezierPath.fillRect(bounds)
+    }
+    
+    override var focusRingMaskBounds: NSRect {
+        return bounds
+    }
+    
     // MARK: - Keyboard Events
     
     override func keyDown(theEvent: NSEvent) {
@@ -151,5 +159,13 @@ class DieView: NSView {
                 intValue = number
             }
         }
+    }
+    
+    override func insertTab(sender: AnyObject?) {
+        window?.selectNextKeyView(sender)
+    }
+    
+    override func insertBacktab(sender: AnyObject?) {
+        window?.selectPreviousKeyView(sender)
     }
 }
