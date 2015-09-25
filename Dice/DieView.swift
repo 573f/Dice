@@ -116,6 +116,27 @@ class DieView: NSView {
         intValue = Int(arc4random_uniform(5)) + 1
     }
     
+    // MARK: - Actions
+    
+    @IBAction func savePDF(sender: AnyObject!) {
+        let savePanel = NSSavePanel()
+        savePanel.allowedFileTypes = ["pdf"]
+        savePanel.beginSheetModalForWindow(window!) {
+            [unowned savePanel] (result) in
+            if result == NSModalResponseOK {
+                let data = self.dataWithPDFInsideRect(self.bounds)
+                do {
+                    try data.writeToURL(savePanel.URL!, options: NSDataWritingOptions.DataWritingAtomic)
+                } catch let error as NSError {
+                    let alert = NSAlert(error: error)
+                    alert.runModal()
+                } catch {
+                    fatalError("unknown error")
+                }
+            }
+        }
+    }
+    
     // MARK: - Mouse Events
     
     override func mouseDown(theEvent: NSEvent) {
