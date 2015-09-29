@@ -16,6 +16,8 @@
 		693E700B1BB304A800E2EFCB /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 693E70091BB304A800E2EFCB /* MainWindowController.xib */; settings = {ASSET_TAGS = (); }; };
 		693E700D1BB304F100E2EFCB /* DieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E700C1BB304F100E2EFCB /* DieView.swift */; settings = {ASSET_TAGS = (); }; };
 		693E700F1BB5D11900E2EFCB /* NSString+Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693E700E1BB5D11900E2EFCB /* NSString+Drawing.swift */; settings = {ASSET_TAGS = (); }; };
+		69F258EB1BB9D7CA00F1CAF6 /* ConfigurationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F258E91BB9D7CA00F1CAF6 /* ConfigurationWindowController.swift */; settings = {ASSET_TAGS = (); }; };
+		69F258EC1BB9D7CA00F1CAF6 /* ConfigurationWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F258EA1BB9D7CA00F1CAF6 /* ConfigurationWindowController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		693E70091BB304A800E2EFCB /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
 		693E700C1BB304F100E2EFCB /* DieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DieView.swift; sourceTree = "<group>"; };
 		693E700E1BB5D11900E2EFCB /* NSString+Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Drawing.swift"; sourceTree = "<group>"; };
+		69F258E91BB9D7CA00F1CAF6 /* ConfigurationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationWindowController.swift; sourceTree = "<group>"; };
+		69F258EA1BB9D7CA00F1CAF6 /* ConfigurationWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigurationWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				693E70081BB304A800E2EFCB /* MainWindowController.swift */,
 				693E70091BB304A800E2EFCB /* MainWindowController.xib */,
 				693E700E1BB5D11900E2EFCB /* NSString+Drawing.swift */,
+				69F258E91BB9D7CA00F1CAF6 /* ConfigurationWindowController.swift */,
+				69F258EA1BB9D7CA00F1CAF6 /* ConfigurationWindowController.xib */,
 			);
 			path = Dice;
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 			files = (
 				693E6FE21BB3038900E2EFCB /* Assets.xcassets in Resources */,
 				693E700B1BB304A800E2EFCB /* MainWindowController.xib in Resources */,
+				69F258EC1BB9D7CA00F1CAF6 /* ConfigurationWindowController.xib in Resources */,
 				693E6FE51BB3038900E2EFCB /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 			files = (
 				693E700F1BB5D11900E2EFCB /* NSString+Drawing.swift in Sources */,
 				693E700A1BB304A800E2EFCB /* MainWindowController.swift in Sources */,
+				69F258EB1BB9D7CA00F1CAF6 /* ConfigurationWindowController.swift in Sources */,
 				693E6FE01BB3038900E2EFCB /* AppDelegate.swift in Sources */,
 				693E700D1BB304F100E2EFCB /* DieView.swift in Sources */,
 			);
@@ -486,6 +494,7 @@
 				693E70011BB3038900E2EFCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		693E70021BB3038900E2EFCB /* Build configuration list for PBXNativeTarget "DiceTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +503,7 @@
 				693E70041BB3038900E2EFCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		693E70051BB3038900E2EFCB /* Build configuration list for PBXNativeTarget "DiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +512,7 @@
 				693E70071BB3038900E2EFCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

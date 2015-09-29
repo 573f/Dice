@@ -30,6 +30,16 @@ class DieView: NSView, NSDraggingSource {
         }
     }
     
+    var color: NSColor = NSColor.whiteColor() {
+        didSet {
+            needsDisplay = true
+        }
+    }
+    
+    var numberOfTimesToRoll: Int = 7
+    
+    var rollsRemaining: Int = 0
+    
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         commonInit()
@@ -55,7 +65,7 @@ class DieView: NSView, NSDraggingSource {
         
         if highlightedForDragging {
             let gradient = NSGradient(
-                startingColor: NSColor.whiteColor(),
+                startingColor: color,
                 endingColor: backgroundColor)
             gradient?.drawInRect(bounds, relativeCenterPosition: NSZeroPoint)
         } else {
@@ -89,7 +99,7 @@ class DieView: NSView, NSDraggingSource {
             shadow.set()
             
             // Draw the rounded shape of the die profile
-            NSColor.whiteColor().set()
+            color.set()
             NSBezierPath(roundedRect: dieFrame, xRadius: cornerRadius, yRadius: cornerRadius).fill()
             
             NSGraphicsContext.restoreGraphicsState()
@@ -144,6 +154,28 @@ class DieView: NSView, NSDraggingSource {
     
     func randomize() {
         intValue = Int(arc4random_uniform(5)) + 1
+    }
+    
+    func roll() {
+        rollsRemaining = numberOfTimesToRoll
+        NSTimer.scheduledTimerWithTimeInterval(0.15,
+            target: self,
+            selector: Selector("rollTick:"),
+            userInfo: nil,
+            repeats: true)
+        window?.makeFirstResponder(nil)
+    }
+    
+    func rollTick(sender: NSTimer) {
+        let lastIntValue = intValue
+        while intValue == lastIntValue {
+            randomize()
+        }
+        rollsRemaining--
+        if rollsRemaining == 0 {
+            sender.invalidate()
+            window?.makeFirstResponder(self)
+        }
     }
     
     // MARK: - Actions
@@ -216,7 +248,7 @@ class DieView: NSView, NSDraggingSource {
     
     override func mouseUp(theEvent: NSEvent) {
         if theEvent.clickCount == 2 {
-            randomize()
+            roll()
         }
         pressed = false
     }
